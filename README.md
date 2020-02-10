@@ -90,7 +90,10 @@ corrplot price mpg trunk weight turn, ci(fisher)
 Todo
 ---------------------------------
 
-Still working on this.
+There are a few things I would like to add before submitting this to the SSC. In particular:
+[] Default Fisher transform CI's
+[] Finish off the internal documentation
+[] Pass additional options to twoway
 
 
 Acknowledgements
