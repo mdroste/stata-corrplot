@@ -24,6 +24,8 @@ For an example, consider Figure 8 from [Chetty et al. 2014, "Where is the Land o
 
 ![corrplot demo](figs/chetty2014_fig8.png "corrplot demo")
 
+These plots can be a little cumbersome to produce in Stata. Corrplot makes it a lot easier.
+
 
 
 Prequisites
