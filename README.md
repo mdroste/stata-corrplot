@@ -74,7 +74,18 @@ help corrplot
 Usage notes
 ---------------------------------
 
-- This program returns normal asymptotic standard errors by normalizing all variables to have unit standard deviation. In finite samples, when the true correlation coefficient is near -1 or 1, this is known to behave badly. Using the option 
+- This program returns normal asymptotic standard errors by normalizing all variables to have unit standard deviation and returning normal asymptotic standard errors from a regression of y on each x. In finite samples, when the point estimate for our sample correlation coefficient is near -1 or 1, this is known to [sometimes behave badly](http://faculty.washington.edu/gloftus/P317-318/Useful_Information/r_to_z/PearsonrCIs.pdf). Using the option ci(fisher) produces confidence intervals using Fisher's z-transformation. Here's an example:
+
+```stata
+* Load built-in dataset of car chracteristics
+clear all
+sysuse auto
+
+* Plot the correlations, with confidence intervals calculated using Fisher's z transform
+corrplot price mpg trunk weight turn, ci(fisher)
+```
+
+
   
 Todo
 ---------------------------------
