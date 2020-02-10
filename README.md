@@ -12,7 +12,7 @@ corrplot
 
 Pretty plots of pairwise correlations in Stata
 
-`version 0.11 17jul2019`
+`version 0.5 10feb2020`
 
 
 Overview
