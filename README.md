@@ -20,7 +20,7 @@ Overview
 
 Corrplot produces nice plots of pairwise correlations between a dependent variable of interest and a set of covariates.
 
-For an example, consider Figure 8 from Chetty et al. (2014), "Where is the Land of Opportunity?". This figure plots correlations across commuting zones (CZs) between the authors' preferred measure of intergenerational mobility and a set of commuting zone characteristics, i.e. mean household income, violent crime rate, etc.
+For an example, consider Figure 8 from [Chetty et al. 2014, "Where is the Land of Opportunity? Intergenerational Mobility in the United States"](https://opportunityinsights.org/paper/land-of-opportunity/). This figure plots correlations across commuting zones (CZs) between the authors' preferred measure of intergenerational mobility and a set of commuting zone characteristics, i.e. mean household income, violent crime rate, etc.
 
 ![corrplot demo](figs/chetty2014_fig8.png "corrplot demo")
 
