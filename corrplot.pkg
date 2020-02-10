@@ -1,0 +1,8 @@
+v 0.5
+d
+d 'corrplot': Pretty plots of pairwise correlations in Stata
+d
+d Distribution-Date: 20200210
+d
+f corrplot.ado
+f corrplot.sthlp

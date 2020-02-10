@@ -1,0 +1,4 @@
+
+v 0.5
+d Michael Droste, mdroste@fas.harvard.edu
+p 'corrplot': Pretty plots of pairwise correlations in Stata
