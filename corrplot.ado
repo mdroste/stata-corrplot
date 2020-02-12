@@ -1,7 +1,7 @@
 *===============================================================================
 * PROGRAM: corrplot.ado
 * PURPOSE: Produces pretty plots of correlations between y and x
-* 7/2016
+* DATE: Feb 2020
 *===============================================================================
  
 program define corrplot
