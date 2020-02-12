@@ -1,7 +1,7 @@
 *===============================================================================
 * PROGRAM: corrplot.ado
 * PURPOSE: Produces pretty plots of correlations between y and x
-* DATE: Feb 2020
+* Feb 2020
 *===============================================================================
  
 program define corrplot
@@ -219,16 +219,25 @@ program define corrplot
 		if rcoef_true_`v' < 0 {
 			local t1 = rcil_`v'
 			local t2 = rcih_`v'
-			qui replace rcil_`v' = 0 if rcil_`v' < 0
-			qui replace rcih_`v' = 0 if rcih_`v' < 0
-			qui replace rcih_`v' = abs(`t1') if `t1'<0 & `t2'>0
-			qui replace rcil_`v' = abs(`t2') if `t1'<0 & `t2'<0
-			qui replace rcih_`v' = abs(`t1') if `t1'<0 & `t2'<0
+			if "`gonegative'"=="" {
+				qui replace rcil_`v' = 0 if rcil_`v' < 0
+				qui replace rcih_`v' = 0 if rcih_`v' < 0
+				qui replace rcih_`v' = abs(`t1') if `t1'<0 & `t2'>0
+				qui replace rcil_`v' = abs(`t2') if `t1'<0 & `t2'<0
+				qui replace rcih_`v' = abs(`t1') if `t1'<0 & `t2'<0
+			}
 		}
 		
 		if rcoef_true_`v' > 0 {
-			qui replace rcil_`v' = 0 if rcil_`v' < 0
+			if "`gonegative'"=="" {
+				qui replace rcil_`v' = 0 if rcil_`v' < 0
+			}
 		}
+		
+		qui replace rcil_`v' = -1 if rcil_`v' < -1
+		qui replace rcil_`v' = 1  if rcil_`v' > 1
+		qui replace rcih_`v' = -1 if rcih_`v' < -1
+		qui replace rcih_`v' = 1  if rcih_`v' > 1
 		
 		local v = `v' + 1
 	}
