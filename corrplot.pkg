@@ -2,7 +2,7 @@ v 0.61
 d
 d 'corrplot': Pretty plots of pairwise correlations in Stata
 d
-d Distribution-Date: 20200212
+d Distribution-Date: 20200213
 d
 f corrplot.ado
 f corrplot.sthlp
